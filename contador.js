@@ -1,12 +1,12 @@
 (function() {
-
+9
     const second = 1000, 
         minute = second * 60, 
         hour = minute * 60, 
         day = hour * 24;
 
-    let birthday = "July 06, 2023 00:00:00",
-        countdown = new Date(birthday).getTime(),
+    let navidarks = "December 25, 2022 00:00:00",
+        countdown = new Date(navidarks).getTime(),
         x = setInterval(function () {
             let now = new Date().getTime(), distance = countdown - now;
 
@@ -20,7 +20,7 @@
                     countdown = document.getElementById("countdown"),
                     content = document.getElementById("content");
 
-                headline.innerText = "Es tu cumpleaños!";
+                headline.innerText = "Feliz Navidad!!";
                 countdown.style.display = "none";
                 content.style.display = "block";
 
