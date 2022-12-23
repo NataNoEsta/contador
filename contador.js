@@ -4,11 +4,13 @@
         hour = minute * 60, 
         day = hour * 24;
 
+    //navidarks, countdown , x -> se declaran en let   
     let navidarks = "December 25, 2022 00:00:00",
         countdown = new Date(navidarks).getTime(),
+        //el método getTime() devuelve los milisigeundos desde *fecha unix*
         x = setInterval(function () {
             let now = new Date().getTime(), distance = countdown - now;
-
+            // console.log(now);
             (document.getElementById("days").innerText = Math.floor(distance / day)),
             (document.getElementById("hours").innerText = Math.floor((distance % day)/hour)),
             (document.getElementById("minutes").innerText = Math.floor((distance % hour)/minute)),
@@ -19,6 +21,7 @@
                     countdown = document.getElementById("countdown"),
                     content = document.getElementById("content");
 
+                //muestra headline y oculta el contador si el contador - feha actual es 0
                 headline.innerText = "Feliz Navidad!!";
                 countdown.style.display = "none";
                 content.style.display = "block";
