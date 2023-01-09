@@ -5,8 +5,8 @@
         day = hour * 24;
 
     //navidarks, countdown , x -> se declaran en let   
-    let navidarks = "December 25, 2022 00:00:00",
-        countdown = new Date(navidarks).getTime(),
+    let cumple = "July 6, 2023 00:00:00",
+        countdown = new Date(cumple).getTime(),
         //el método getTime() devuelve los milisigeundos desde *fecha unix*
         x = setInterval(function () {
             let now = new Date().getTime(), distance = countdown - now;
@@ -22,7 +22,7 @@
                     content = document.getElementById("content");
 
                 //muestra headline y oculta el contador si el contador - feha actual es 0
-                headline.innerText = "Feliz Navidad!!";
+                headline.innerText = "Feliz Cumple!";
                 countdown.style.display = "none";
                 content.style.display = "block";
 
